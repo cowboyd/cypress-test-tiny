@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("expect", () => {
+  Cypress.log({
+    displayName: "expectation",
+    message: "expectation registered"
+  });
+})
